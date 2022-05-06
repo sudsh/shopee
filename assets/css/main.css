@@ -1423,20 +1423,6 @@ i.home-product-item__like-icon-fill {
     margin-top: 0.8rem;
 }
 
-.grid__dear {
-    padding-top: 30px;
-}
-
-.footer__text-dear {
-    margin-top: 15px;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    font-weight: 500;
-    text-align: center;
-    color: var(--primary-color);
-    user-select: none;
-}
-
 .chat-box {
     bottom: 0;
     right: 8px;
