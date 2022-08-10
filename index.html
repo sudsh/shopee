@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
@@ -19,8 +21,8 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng
@@ -85,7 +87,7 @@
                                     </li>
                                     <li class="header__notify-item">
                                         <a href="" class="header__notify-link">
-                                            <img src="./assets/img/received_487110829735984.jpeg"
+                                            <img src="./assets/img/rosepic1.jpg"
                                                 alt="Ngừi iu" class="header__notify-img">
                                             <div class="header__notify-info">
                                                 <span class="header__notify-name">Sắm ngay một cô ngừi iu thôi nàoooo!</span>
@@ -129,8 +131,12 @@
                     </ul>
                 </nav>
 
+                <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -139,6 +145,8 @@
                             </svg>
                         </a>
                     </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
 
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -197,10 +205,10 @@
                                 <ul class="header__cart-list-item">
                                     <!-- cart item -->
                                     <li class="header__cart-item">
-                                        <img src="./assets/img/IMG_20210615_1039.jpg" alt="" class="header__cart-img">
+                                        <img src="./assets/img/rosepic1.jpg" alt="" class="header__cart-img">
                                         <div class="header__cart-item-info">
                                             <div class="header__cart-item-head">
-                                                <h5 class="header__cart-item-name">Thùy Linh</h5>
+                                                <h5 class="header__cart-item-name">Rosé</h5>
                                                 <div class="header__cart-item-price-wrap">
                                                     <span class="header__cart-item-price">Vô giá</span>
                                                     <span class="header__cart-item-multiply">x</span>
@@ -209,7 +217,7 @@
                                             </div>
                                             <div class="header__cart-item-body">
                                                 <span class="header__cart-item-description">
-                                                     Phân loại: Ngang ngược, vô tâm
+                                                     Phân loại: Dễ thương
                                                 </span>
                                                 <span class="header__cart-item-remove">Xóa</span>
                                             </div>
@@ -337,52 +345,69 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item-active">
+                    <a href="" class="header__sort-link">Mới nhất </a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá
+                        <i class="header__sort-link-icon fa-solid fa-angle-down"></i>
+                    </a>
+                </li>
+
+            </ul>
         </header>
 
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category__heading">Danh mục</h3>
             
                             <ul class="category-list">
                                 <li class="category-item category-item--active">
-                                    <a href="#" class="category-item-link">Thời trang nam</a>
+                                    <a href="#" class="category-item-link">Thời trang nam xu hướng</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item-link">Thời trang nữ</a>
+                                    <a href="#" class="category-item-link">Thời trang nữ xu hướng</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item-link">Phụ kiện</a>
+                                    <a href="#" class="category-item-link">Phụ kiện xu hướng</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item-link">Giày dép nam</a>
+                                    <a href="#" class="category-item-link">Giày dép nam xu hướng</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item-link">Trang sức</a>
+                                    <a href="#" class="category-item-link">Trang sức cao cấp</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item-link">Thiết bị điện tử</a>
+                                    <a href="#" class="category-item-link">Thiết bị điện tử chính hãng</a>
                                 </li>
                                 <li class="category-item">
                                     <a href="#" class="category-item-link">Thể thao & du lịch</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item-link">Đồ chơi</a>
+                                    <a href="#" class="category-item-link">Đồ chơi thân thiện</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item-link">Đồng hồ</a>
+                                    <a href="#" class="category-item-link">Đồng hồ nhập khẩu</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="#" class="category-item-link">Sách</a>
+                                    <a href="#" class="category-item-link">Sách đúng bản quyền</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
 
-                    <div class="grid__column-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -419,10 +444,45 @@
                             </div>
                         </div>
 
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Thời trang nam xu hướng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Thời trang nữ xu hướng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Phụ kiện xu hướng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Giày dép nam xu hướng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Trang sức cao cấp</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Thiết bị điện tử chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Thể thao & du lịch</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồ chơi chính hãng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đồng hồ nhập khẩu</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Sách đúng bản quyền</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                         <div class="home-product">
-                            <div class="grid__row">
+                            <div class="row sm-gutter">
                                 <!-- product item -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/5d34b7d18414ef0f2e7a49735dc13e0b);"></div>
                                         <h4 class="home-product-item__name">Áo polo nam Teddy, áo polo nam chất liệu vải cá sấu Cotton mềm mịn chuẩn form</h4>
@@ -458,7 +518,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/6533de2f0d036696535aa121ed6257b8);"></div>
                                         <h4 class="home-product-item__name">Quần baggy nam ống rộng vải Hàn cao cấp, quần tây âu co giãn tốt Premium thời trang</h4>
@@ -494,7 +554,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7a8c194cba1665cd648f23093157ebed);"></div>
                                         <h4 class="home-product-item__name">Áo sơ mi nam Vettino dài tay cổ bẻ dáng ôm Hàn Quốc vải lụa thái cao cấp chống nhăn</h4>
@@ -530,7 +590,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/e5ab8d6c1d83312ee63682829200297f);"></div>
                                         <h4 class="home-product-item__name">Áo Khoác Varsity Jacket bomber bóng chày basic nam nữ form rộng Local Brand</h4>
@@ -566,7 +626,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/590a0d9f7bcc7751e4385ba036b887dc);"></div>
                                         <h4 class="home-product-item__name">Áo khoác nỉ nam nữ tay lỡ, Áo sweater hoodie nam nữ from rộng unisex</h4>
@@ -602,7 +662,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/6d52cdb59d5b513686905aff58924ff0);"></div>
                                         <h4 class="home-product-item__name">Áo thun LEVENTS XL Logo/ White Black</h4>
@@ -638,7 +698,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/62f3517938351425951767ef524b2ef9);"></div>
                                         <h4 class="home-product-item__name">Quần jean nam baggy HELLOYOU ống suông rộng Top xu hướng 2022</h4>
@@ -674,7 +734,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/5c64475c9c4ab9a4a344a4d5876e12ed);"></div>
                                         <h4 class="home-product-item__name">Áo thun UNDER Hà Nội 36 Phố Phường</h4>
@@ -710,7 +770,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1a291c00b4f4d94155d8dd976682a713);"></div>
                                         <h4 class="home-product-item__name">Áo Thun SLY Simple màu trắng</h4>
@@ -742,7 +802,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/5da25e01bb98e234cc408939259a9d31);"></div>
                                         <h4 class="home-product-item__name">Bộ Quần Áo Nam Áo Thun Quần Jogger In Chữ Phong Cách Trẻ Trung Thời Trang</h4>
@@ -778,7 +838,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/ee66989bb57eecd007cd05cfb60d62ea);"></div>
                                         <h4 class="home-product-item__name">Áo len hàn VINTAGE đồ đôi thu đông 2022 siêu xinh</h4>
@@ -810,7 +870,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7c48516c1efac202133c0b5f78be973c);"></div>
                                         <h4 class="home-product-item__name">Áo sơ mi đôi xuân hè 2022 thanh lịch đơn giản hot couple</h4>
@@ -838,7 +898,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/40e1dc39a23f49e3dd979804863ec1f8);"></div>
                                         <h4 class="home-product-item__name">Áo khoác denim dáng rộng cổ bẻ kiểu Hàn Quốc retro thời trang mùa thu cho nam</h4>
@@ -874,7 +934,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/25bcc7b77df227839a057e4e80721867);"></div>
                                         <h4 class="home-product-item__name">Áo Polo Nam ATINO vải cá sấu Cotton thoáng mát trẻ trung chuẩn form regular PL706</h4>
@@ -910,7 +970,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7138a7fa4155053f62e7c86b305eec66);"></div>
                                         <h4 class="home-product-item__name">Quần dài lưng thun phong cách Hàn Quốc hợp thời trang cho nam</h4>
@@ -942,6 +1002,42 @@
                                         </div>
                                         <div class="home-product-item__sale-off">
                                             <div class="home-product-item__sale-off-percent">40%</div>
+                                            <div class="home-product-item__sale-off-label">GIẢM</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a class="home-product-item hide-on-pc" href="">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/6d67f18b6dd6be0a116a5f841f891375);"></div>
+                                        <h4 class="home-product-item__name">Áo Hoodie Nỉ bông TRƠN màu Xám unisex nam/ nữ</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">270.000₫</span>
+                                            <span class="home-product-item__price-current">159.000₫</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty fa-regular fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fa-solid fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star-gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star-gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star-gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__star-gold fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">8k đã bán</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">JayStore</span>
+                                            <div class="home-product-item__origin-name">Hàn Quốc</div>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fa-solid fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <div class="home-product-item__sale-off-percent">41%</div>
                                             <div class="home-product-item__sale-off-label">GIẢM</div>
                                         </div>
                                     </a>
@@ -989,14 +1085,14 @@
 
         <footer class="footer">
             <div class="footerspace">
-                <div class="grid">
+                <div class="grid wide">
                     <div class="footerspace-border"></div>
                 </div>
             </div>
             <div class="footer__body">
-                <div class="grid">
-                    <div class="grid__row mb-3rem">
-                        <div class="grid__column-2-4">
+                <div class="grid wide footer__content">
+                    <div class="row mb-3rem">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -1019,7 +1115,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-6">
                             <h3 class="footer__heading">Giới thiệu</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -1039,7 +1135,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-4 c-12">
                             <h3 class="footer__heading">Thanh toán</h3>
                             <ul class="footer-list footer-list-payment">
                                 <li class="footer-item footer-item-payment">
@@ -1074,7 +1170,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
+                        <div class="col l-2-4 m-6 c-6">
                             <h3 class="footer__heading">Theo dõi</h3>
                             <ul class="footer-list">
                                 <li class="footer-item">
@@ -1097,8 +1193,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="grid__column-2-4">
-                            <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                        <div class="col l-2-4 m-6 c-6">
+                            <h3 class="footer__heading">Cửa hàng trên ứng dụng</h3>
                             <div class="footer__download">
                                 <img src="./assets/img/qr_code.png" alt="Download QR" class="footer__download-qr">
                                 <div class="footer__download-apps">
@@ -1113,8 +1209,8 @@
                         </div>
                     </div>
 
-                    <div class="grid__row">
-                        <div class="footer__nation">
+                    <div class="row">
+                        <div class="footer__nation hide-on-mobile">
                             <div class="footer__nation-text">© 2022 Shopee. Tất cả các quyền được bảo lưu.</div>
                             <div class="footer__nation-area">
                                 <div class="footer__nation-area-text">Quốc gia & Khu vực:</div>
@@ -1172,24 +1268,24 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <div class="grid">
-                    <div class="footer__policy">
-                        <div class="footer__policy-a">
+                <div class="grid wide">
+                    <div class="footer__policy row">
+                        <div class="footer__policy-a col l-3 m-3 c-12">
                             <a href="https://shopee.vn/legaldoc/privacy" class="footer__policy-link">
                                 <span>Chính sách bảo mật</span>
                             </a>
                         </div>
-                        <div class="footer__policy-a">
+                        <div class="footer__policy-a col l-3 m-3 c-12">
                             <a href="https://shopee.vn/docs/170" class="footer__policy-link">
                                 <span>Quy chế hoạt động</span>
                             </a>
                         </div>
-                        <div class="footer__policy-a">
+                        <div class="footer__policy-a col l-3 m-3 c-12">
                             <a href="https://shopee.vn/legaldoc/shipping" class="footer__policy-link">
                                 <span>Chính sách vận chuyển</span>
                             </a>
                         </div>
-                        <div class="footer__policy-a">
+                        <div class="footer__policy-a col l-3 m-3 c-12">
                             <a href="https://shopee.vn/docs/3111" class="footer__policy-link">
                                 <span>Chính sách trả hàng và hoàn tiền</span>
                             </a>
@@ -1216,7 +1312,7 @@
                 </div>
             </div>
         </footer>
-        <div class="chat-box">
+        <div class="chat-box hide-on-mobile-tablet">
             <a href="" class="chat-box-link">
                 <span class="chat-box-notice">19</span>
                 <i class="chat-box-icon fa-solid fa-comments"></i>
@@ -1224,12 +1320,6 @@
             </a>
         </div>
     </div>
-
-    <script>
-        setTimeout(function() {
-            alert("Hãy di chuột vào các chức năng để test và cố gắng đọc đến cuối nhé!💖");
-        }, 1000)
-    </script>
     <!-- Modal layout -->
     <!-- <div class="modal">
         <div class="modal__overlay"></div>
